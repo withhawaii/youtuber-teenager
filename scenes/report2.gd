@@ -11,7 +11,7 @@ func _on_NextButton_button_down():
     if(main.is_no_more_days_left()):
       main.change_scene("gameover")
     else:
-      main.day = main.day + 1
+      main.current_day = main.current_day + 1
       main.change_scene("purchasing")
 
 func _on_BackButton_button_down():

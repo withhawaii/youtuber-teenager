@@ -1,8 +1,21 @@
 extends Node2D
 
-# Declare member variables here.
-var total_days = 0
-var day = 1
+# System variables
+var total_days
+var current_day
+
+# Player variables
+var computer_level
+var softeware_level
+var camera_level
+var microphone_level
+var physical_points
+var mental_points
+var school_points
+var social_points
+var subscribers
+var money
+var happyness_points
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,7 +28,19 @@ func change_scene(name):
     add_child(new_scene)
 
 func get_current_day_number():
-    return "Day: " + str(day)
+    return "Day: " + str(current_day)
 
 func is_no_more_days_left():
-    return day >= total_days
+    return current_day >= total_days
+
+func update_physical_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
+    pass
+
+func update_mental_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
+    pass
+
+func update_school_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
+    pass
+
+func update_social_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
+    pass

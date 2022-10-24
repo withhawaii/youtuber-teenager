@@ -7,5 +7,4 @@ func _ready():
     main = get_node("/root/Main")
     
 func _on_NextButton_button_down():
-    main.day = 1
     main.change_scene("title")
