@@ -1,7 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/purchasing.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=7]
+size = 18
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 33
@@ -11,8 +18,39 @@ font_data = ExtResource( 1 )
 bg_color = Color( 0.129412, 0.0666667, 0.890196, 1 )
 
 [sub_resource type="DynamicFont" id=1]
-size = 55
+size = 54
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 33
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.184314, 0.027451, 0.945098, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=11]
+
+[sub_resource type="StyleBoxFlat" id=12]
 
 [node name="Purchasing" type="Node2D"]
 script = ExtResource( 2 )
@@ -22,12 +60,13 @@ margin_left = 1.0
 margin_top = -1.0
 margin_right = 1001.0
 margin_bottom = 599.0
+theme = SubResource( 8 )
 
 [node name="NextButton" type="Button" parent="Background"]
-margin_left = 600.0
-margin_top = 500.0
-margin_right = 800.0
-margin_bottom = 550.0
+margin_left = 739.0
+margin_top = 509.0
+margin_right = 939.0
+margin_bottom = 559.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 text = "Next"
@@ -44,17 +83,210 @@ margin_right = 1004.0
 margin_bottom = 84.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Purchasing"
+text = "Your Equipments"
 align = 1
 
-[node name="DayLabel" type="Label" parent="Background"]
+[node name="DayLabel" type="Label" parent="Background/Header"]
 margin_left = 22.0
-margin_top = 121.0
-margin_right = 185.0
-margin_bottom = 191.0
-custom_colors/font_color = Color( 0.0509804, 0.0117647, 0.0117647, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Day:"
-align = 1
+margin_top = 31.0
+margin_right = 78.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 14 )
+text = "Day: 0"
+
+[node name="MoneyLabel" type="Label" parent="Background/Header"]
+anchor_right = 0.026
+anchor_bottom = 0.44
+margin_left = 890.0
+margin_top = 57.0
+margin_right = 958.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 13 )
+text = "0"
+align = 2
+
+[node name="SubscriberLabel" type="Label" parent="Background/Header"]
+anchor_right = 0.026
+anchor_bottom = 0.44
+margin_left = 890.0
+margin_top = 17.0
+margin_right = 958.0
+margin_bottom = 5.0
+custom_fonts/font = SubResource( 13 )
+text = "100"
+align = 2
+
+[node name="ComputerLabel" type="Label" parent="Background"]
+margin_left = 171.0
+margin_top = 169.0
+margin_right = 539.0
+margin_bottom = 214.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Computer: Lv"
+align = 2
+
+[node name="SoftwareLabel" type="Label" parent="Background"]
+margin_left = 69.0
+margin_top = 235.0
+margin_right = 540.0
+margin_bottom = 280.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Editing Software: Lv"
+align = 2
+
+[node name="CameraLabel" type="Label" parent="Background"]
+margin_left = 142.0
+margin_top = 301.0
+margin_right = 542.0
+margin_bottom = 346.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Video Camera: Lv"
+align = 2
+
+[node name="MicrophoneLabel" type="Label" parent="Background"]
+margin_left = 173.0
+margin_top = 374.0
+margin_right = 541.0
+margin_bottom = 419.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Microphone: Lv"
+align = 2
+
+[node name="ComputerLv" type="Label" parent="Background"]
+margin_left = 546.0
+margin_top = 169.0
+margin_right = 577.0
+margin_bottom = 214.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 2
+
+[node name="SoftwareLv" type="Label" parent="Background"]
+margin_left = 547.0
+margin_top = 236.0
+margin_right = 578.0
+margin_bottom = 281.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 2
+
+[node name="MicrophoneLv" type="Label" parent="Background"]
+margin_left = 549.0
+margin_top = 375.0
+margin_right = 580.0
+margin_bottom = 420.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 2
+
+[node name="CameraLv" type="Label" parent="Background"]
+margin_left = 548.0
+margin_top = 301.0
+margin_right = 579.0
+margin_bottom = 346.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 2
+
+[node name="ComputerUpgradeButton" type="Button" parent="Background"]
+anchor_left = 0.61
+anchor_top = 0.179
+anchor_right = 0.61
+anchor_bottom = 0.179
+margin_left = 4.0
+margin_top = 62.6
+margin_right = 113.0
+margin_bottom = 99.6
+custom_fonts/font = SubResource( 5 )
+text = "Upgrade"
+
+[node name="SoftwareUpgradeButton" type="Button" parent="Background"]
+anchor_left = 0.61
+anchor_top = 0.179
+anchor_right = 0.61
+anchor_bottom = 0.179
+margin_left = 4.0
+margin_top = 129.6
+margin_right = 113.0
+margin_bottom = 166.6
+custom_fonts/font = SubResource( 5 )
+text = "Upgrade"
+
+[node name="CameraUpgradeButton" type="Button" parent="Background"]
+anchor_left = 0.61
+anchor_top = 0.179
+anchor_right = 0.61
+anchor_bottom = 0.179
+margin_left = 3.0
+margin_top = 199.6
+margin_right = 112.0
+margin_bottom = 236.6
+custom_fonts/font = SubResource( 5 )
+text = "Upgrade"
+
+[node name="MicrophoneUpgradeButton" type="Button" parent="Background"]
+anchor_left = 0.61
+anchor_top = 0.179
+anchor_right = 0.61
+anchor_bottom = 0.179
+margin_left = 2.0
+margin_top = 269.6
+margin_right = 111.0
+margin_bottom = 306.6
+custom_fonts/font = SubResource( 5 )
+text = "Upgrade"
+
+[node name="PurchaseDialog" type="WindowDialog" parent="Background"]
+margin_left = 186.0
+margin_top = 160.0
+margin_right = 841.0
+margin_bottom = 509.0
+
+[node name="ConfirmationMessage" type="Label" parent="Background/PurchaseDialog"]
+margin_left = 53.0
+margin_top = 30.0
+margin_right = 578.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 6 )
+text = "Popup message..."
+autowrap = true
+
+[node name="YesButton" type="Button" parent="Background/PurchaseDialog"]
+anchor_right = 0.159
+anchor_bottom = 0.314
+margin_left = 408.0
+margin_top = 251.0
+margin_right = 462.855
+margin_bottom = 199.414
+custom_fonts/font = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "Sure"
+
+[node name="NoButton" type="Button" parent="Background/PurchaseDialog"]
+material = SubResource( 11 )
+anchor_right = 0.159
+anchor_bottom = 0.314
+margin_left = 95.0
+margin_top = 251.0
+margin_right = 149.855
+margin_bottom = 199.414
+custom_fonts/font = SubResource( 9 )
+custom_styles/normal = SubResource( 12 )
+keep_pressed_outside = true
+text = "Cancel"
 
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]
+[connection signal="button_down" from="Background/ComputerUpgradeButton" to="." method="_on_ComputerUpgradeButton_button_down"]
+[connection signal="button_down" from="Background/SoftwareUpgradeButton" to="." method="_on_SoftwareUpgradeButton_button_down"]
+[connection signal="button_down" from="Background/CameraUpgradeButton" to="." method="_on_CameraUpgradeButton_button_down"]
+[connection signal="button_down" from="Background/MicrophoneUpgradeButton" to="." method="_on_MicrophoneUpgrdeButton_button_down"]
+[connection signal="button_down" from="Background/PurchaseDialog/YesButton" to="." method="_on_YesButton_button_down"]
+[connection signal="button_down" from="Background/PurchaseDialog/NoButton" to="." method="_on_NoButton_button_down"]

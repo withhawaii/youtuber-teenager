@@ -6,7 +6,7 @@ var current_day
 
 # Player variables
 var computer_level
-var softeware_level
+var software_level
 var camera_level
 var microphone_level
 var physical_points
@@ -16,6 +16,13 @@ var social_points
 var subscribers
 var money
 var happyness_points
+
+# Current hour allocations
+var school_hours
+var socialize_hours
+var eat_hours
+var sleep_hours
+var youtube_hours
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
