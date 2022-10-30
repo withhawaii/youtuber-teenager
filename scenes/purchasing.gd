@@ -3,6 +3,7 @@ extends Node2D
 var main
 var upgrade_item
 var upgrade_cost
+var upgrade_level
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,9 +11,8 @@ func _ready():
     update_screen()
    
 func update_screen():
-    $Background/Header/DayLabel.text = main.get_current_day_number()
-    $Background/Header/MoneyLabel.text = str(main.money)
-    $Background/Header/SubscriberLabel.text = str(main.subscribers)
+    $Background/Header/Background/TitleLabel.text = "Your Equipments"
+    $Background/Header.update_screen()
     $Background/ComputerLv.text = str(main.computer_level)
     $Background/SoftwareLv.text = str(main.software_level)
     $Background/CameraLv.text = str(main.camera_level)
@@ -28,7 +28,7 @@ func update_screen():
 
 func update_PurchaseDialog():
     if main.money >= upgrade_cost: 
-      $Background/PurchaseDialog/ConfirmationMessage.text = "Would you like to upgrade your " + upgrade_item + " to level" + str(main.computer_level + 1)  + " ? " + "It will cost $" + str(upgrade_cost) + " to upgrade."
+      $Background/PurchaseDialog/ConfirmationMessage.text = "Would you like to upgrade your " + upgrade_item + " to level " + str(upgrade_level)  + "? \n" + "It will cost $" + str(upgrade_cost) + " to upgrade."
     else:
       $Background/PurchaseDialog/ConfirmationMessage.text = "You do not have enough money to upgrade your " + upgrade_item + "."
       $Background/PurchaseDialog/YesButton.disabled = true
@@ -37,24 +37,28 @@ func update_PurchaseDialog():
     
 func _on_ComputerUpgradeButton_button_down():
     upgrade_item = "Computer"
-    upgrade_cost = main.computer_level * 10
+    upgrade_cost = main.computer_level * 1000
+    upgrade_level = main.computer_level + 1
     update_PurchaseDialog()
     
 func _on_SoftwareUpgradeButton_button_down():
     upgrade_item = "Editing Software"
-    upgrade_cost = main.software_level * 10
+    upgrade_cost = main.software_level * 500
+    upgrade_level = main.software_level + 1
     update_PurchaseDialog()
 
 
 func _on_CameraUpgradeButton_button_down():
     upgrade_item = "Video Camera"
-    upgrade_cost = main.camera_level * 10
+    upgrade_cost = main.camera_level * 100
+    upgrade_level = main.camera_level + 1
     update_PurchaseDialog()
 
 
 func _on_MicrophoneUpgrdeButton_button_down():
     upgrade_item = "Microphone"
-    upgrade_cost = main.microphone_level * 10
+    upgrade_cost = main.microphone_level * 50
+    upgrade_level = main.microphone_level + 1
     update_PurchaseDialog()
 
 func _on_YesButton_button_down():

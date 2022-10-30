@@ -1,14 +1,15 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/purchasing.gd" type="Script" id=2]
+[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=3]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=15]
 size = 18
 font_data = ExtResource( 1 )
 
 [sub_resource type="Theme" id=8]
-default_font = SubResource( 7 )
+default_font = SubResource( 15 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 33
@@ -16,18 +17,6 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.129412, 0.0666667, 0.890196, 1 )
-
-[sub_resource type="DynamicFont" id=1]
-size = 54
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=14]
-size = 33
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=13]
-size = 25
-font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 36
@@ -42,7 +31,7 @@ size = 30
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=9]
-size = 42
+size = 32
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=10]
@@ -62,6 +51,8 @@ margin_right = 1001.0
 margin_bottom = 599.0
 theme = SubResource( 8 )
 
+[node name="Header" parent="Background" instance=ExtResource( 3 )]
+
 [node name="NextButton" type="Button" parent="Background"]
 margin_left = 739.0
 margin_top = 509.0
@@ -70,51 +61,6 @@ margin_bottom = 559.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 text = "Next"
-
-[node name="Header" type="ColorRect" parent="Background"]
-margin_right = 1000.0
-margin_bottom = 100.0
-color = Color( 1, 0.113725, 0, 1 )
-
-[node name="HeaderLabel" type="Label" parent="Background/Header"]
-margin_left = 4.0
-margin_top = 14.0
-margin_right = 1004.0
-margin_bottom = 84.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Your Equipments"
-align = 1
-
-[node name="DayLabel" type="Label" parent="Background/Header"]
-margin_left = 22.0
-margin_top = 31.0
-margin_right = 78.0
-margin_bottom = 72.0
-custom_fonts/font = SubResource( 14 )
-text = "Day: 0"
-
-[node name="MoneyLabel" type="Label" parent="Background/Header"]
-anchor_right = 0.026
-anchor_bottom = 0.44
-margin_left = 890.0
-margin_top = 57.0
-margin_right = 958.0
-margin_bottom = 45.0
-custom_fonts/font = SubResource( 13 )
-text = "0"
-align = 2
-
-[node name="SubscriberLabel" type="Label" parent="Background/Header"]
-anchor_right = 0.026
-anchor_bottom = 0.44
-margin_left = 890.0
-margin_top = 17.0
-margin_right = 958.0
-margin_bottom = 5.0
-custom_fonts/font = SubResource( 13 )
-text = "100"
-align = 2
 
 [node name="ComputerLabel" type="Label" parent="Background"]
 margin_left = 171.0
@@ -164,7 +110,6 @@ margin_bottom = 214.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "0"
-align = 2
 
 [node name="SoftwareLv" type="Label" parent="Background"]
 margin_left = 547.0
@@ -174,7 +119,6 @@ margin_bottom = 281.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "0"
-align = 2
 
 [node name="MicrophoneLv" type="Label" parent="Background"]
 margin_left = 549.0
@@ -184,7 +128,6 @@ margin_bottom = 420.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "0"
-align = 2
 
 [node name="CameraLv" type="Label" parent="Background"]
 margin_left = 548.0
@@ -194,7 +137,6 @@ margin_bottom = 346.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "0"
-align = 2
 
 [node name="ComputerUpgradeButton" type="Button" parent="Background"]
 anchor_left = 0.61
@@ -251,10 +193,10 @@ margin_right = 841.0
 margin_bottom = 509.0
 
 [node name="ConfirmationMessage" type="Label" parent="Background/PurchaseDialog"]
-margin_left = 53.0
-margin_top = 30.0
-margin_right = 578.0
-margin_bottom = 185.0
+margin_left = 63.0
+margin_top = 42.0
+margin_right = 588.0
+margin_bottom = 197.0
 custom_fonts/font = SubResource( 6 )
 text = "Popup message..."
 autowrap = true
@@ -262,22 +204,22 @@ autowrap = true
 [node name="YesButton" type="Button" parent="Background/PurchaseDialog"]
 anchor_right = 0.159
 anchor_bottom = 0.314
-margin_left = 408.0
-margin_top = 251.0
-margin_right = 462.855
-margin_bottom = 199.414
+margin_left = 378.0
+margin_top = 250.0
+margin_right = 473.855
+margin_bottom = 190.414
 custom_fonts/font = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
-text = "Sure"
+text = "OK"
 
 [node name="NoButton" type="Button" parent="Background/PurchaseDialog"]
 material = SubResource( 11 )
 anchor_right = 0.159
 anchor_bottom = 0.314
-margin_left = 95.0
-margin_top = 251.0
-margin_right = 149.855
-margin_bottom = 199.414
+margin_left = 80.0
+margin_top = 250.0
+margin_right = 175.855
+margin_bottom = 190.414
 custom_fonts/font = SubResource( 9 )
 custom_styles/normal = SubResource( 12 )
 keep_pressed_outside = true

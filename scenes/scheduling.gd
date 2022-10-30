@@ -6,6 +6,11 @@ var total_hours
 # Called when the node enters the scene tree for the first time.
 func _ready():
     main = get_node("/root/Main")
+    main.school_hours = 0
+    main.socialize_hours = 0
+    main.eat_hours = 0
+    main.sleep_hours = 0
+    main.youtube_hours = 0
     update_screen()
     
 func _on_NextButton_button_down():
@@ -15,7 +20,8 @@ func _on_BackButton_button_down():
     main.change_scene("purchasing")
 
 func update_screen():
-    $Background/Header/DayLabel.text = main.get_current_day_number()
+    $Background/Header/Background/TitleLabel.text = "Set Your Schedule"
+    $Background/Header.update_screen()
     total_hours = main.school_hours + main.socialize_hours + main.eat_hours + main.sleep_hours + main.youtube_hours
     if total_hours == 24:
         $Background/RemainingHoursLabel.text = "You are good to go!"

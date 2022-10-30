@@ -5,7 +5,8 @@ var main
 # Called when the node enters the scene tree for the first time.
 func _ready():
     main = get_node("/root/Main")
-    $Background/DayLabel.text = main.get_current_day_number()
+    $Background/Header/Background/TitleLabel.text = "Report 2"
+    $Background/Header.update_screen()
     
 func _on_NextButton_button_down():
     if(main.is_no_more_days_left()):

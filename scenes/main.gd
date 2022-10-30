@@ -40,7 +40,7 @@ func init_variables():
     school_points = 50
     social_points = 50
     subscribers = 0
-    money = 100
+    money = 100000
     happyness_points = 0
     school_hours = 0
     socialize_hours = 0
@@ -53,9 +53,6 @@ func change_scene(name):
     remove_child(current_scene)
     var new_scene = load("res://scenes/" + name + ".tscn").instance()
     add_child(new_scene)
-
-func get_current_day_number():
-    return "Day: " + str(current_day)
 
 func is_no_more_days_left():
     return current_day >= total_days
