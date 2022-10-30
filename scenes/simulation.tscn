@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/simulation.gd" type="Script" id=2]
@@ -18,6 +18,28 @@ font_data = ExtResource( 1 )
 size = 55
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0.6, 0.2, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0.670588, 0.741176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0.6, 0.866667, 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.631373, 0.780392, 0.878431, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 24
+font_data = ExtResource( 1 )
+
 [node name="Simulation" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -28,13 +50,13 @@ margin_right = 1001.0
 margin_bottom = 599.0
 
 [node name="NextButton" type="Button" parent="Background"]
-margin_left = 600.0
-margin_top = 500.0
-margin_right = 800.0
-margin_bottom = 550.0
+margin_left = 888.0
+margin_top = 523.0
+margin_right = 968.0
+margin_bottom = 573.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
-text = "Next"
+text = "Skip"
 
 [node name="Header" type="ColorRect" parent="Background"]
 margin_right = 1000.0
@@ -51,13 +73,106 @@ text = "Simulation"
 align = 1
 
 [node name="DayLabel" type="Label" parent="Background"]
-margin_left = 22.0
-margin_top = 121.0
-margin_right = 189.0
-margin_bottom = 191.0
+margin_left = 13.0
+margin_top = 15.0
+margin_right = 180.0
+margin_bottom = 85.0
 custom_colors/font_color = Color( 0.0509804, 0.0117647, 0.0117647, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Day :"
+align = 1
+
+[node name="StatusArea" type="ColorRect" parent="."]
+margin_left = 26.0
+margin_top = 122.0
+margin_right = 365.0
+margin_bottom = 311.0
+color = Color( 0.666667, 0.611765, 0.611765, 1 )
+
+[node name="PhysicalPointsBar" type="ProgressBar" parent="StatusArea"]
+margin_left = 111.0
+margin_top = 59.0
+margin_right = 315.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/fg = SubResource( 6 )
+value = 50.0
+
+[node name="PhysicalPoiintsLabel" type="Label" parent="StatusArea"]
+margin_left = 17.0
+margin_top = 61.0
+margin_right = 107.0
+margin_bottom = 82.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Physical Pts:"
+align = 2
+
+[node name="MentlPointsBar" type="ProgressBar" parent="StatusArea"]
+margin_left = 111.0
+margin_top = 88.0
+margin_right = 315.0
+margin_bottom = 109.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/fg = SubResource( 8 )
+value = 50.0
+
+[node name="MentalPoiintsLabel" type="Label" parent="StatusArea"]
+margin_left = 26.0
+margin_top = 88.0
+margin_right = 107.0
+margin_bottom = 109.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Mental Pts:"
+align = 2
+
+[node name="SchoolPointsBar" type="ProgressBar" parent="StatusArea"]
+margin_left = 111.0
+margin_top = 118.0
+margin_right = 315.0
+margin_bottom = 139.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/fg = SubResource( 9 )
+value = 50.0
+
+[node name="SchoolPoiintsLabel" type="Label" parent="StatusArea"]
+margin_left = 23.0
+margin_top = 119.0
+margin_right = 104.0
+margin_bottom = 140.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "School Pts:"
+align = 2
+
+[node name="SocialPointsBar" type="ProgressBar" parent="StatusArea"]
+margin_left = 111.0
+margin_top = 148.0
+margin_right = 315.0
+margin_bottom = 169.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/fg = SubResource( 10 )
+value = 50.0
+
+[node name="SocialPoiintsLabel" type="Label" parent="StatusArea"]
+margin_left = 29.0
+margin_top = 147.0
+margin_right = 104.0
+margin_bottom = 168.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Social Pts:"
+align = 2
+
+[node name="Label" type="Label" parent="StatusArea"]
+margin_left = 105.0
+margin_top = 16.0
+margin_right = 230.0
+margin_bottom = 47.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Your Status"
 align = 1
 
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]

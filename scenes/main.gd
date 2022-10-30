@@ -28,6 +28,26 @@ var youtube_hours
 func _ready():
     change_scene("title")
 
+func init_variables():
+    total_days = 0
+    current_day = 1
+    computer_level = 1
+    software_level = 1
+    camera_level = 1
+    microphone_level = 1
+    physical_points = 50
+    mental_points = 50
+    school_points = 50
+    social_points = 50
+    subscribers = 0
+    money = 100
+    happyness_points = 0
+    school_hours = 0
+    socialize_hours = 0
+    eat_hours = 0
+    sleep_hours = 0
+    youtube_hours = 0
+
 func change_scene(name):
     var current_scene = get_child(0)
     remove_child(current_scene)

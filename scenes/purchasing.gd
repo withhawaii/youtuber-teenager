@@ -30,7 +30,7 @@ func update_PurchaseDialog():
     if main.money >= upgrade_cost: 
       $Background/PurchaseDialog/ConfirmationMessage.text = "Would you like to upgrade your " + upgrade_item + " to level" + str(main.computer_level + 1)  + " ? " + "It will cost $" + str(upgrade_cost) + " to upgrade."
     else:
-      $Background/PurchaseDialog/ConfirmationMessage.text = "You do not have enough money upgrade your " + upgrade_item + "."
+      $Background/PurchaseDialog/ConfirmationMessage.text = "You do not have enough money to upgrade your " + upgrade_item + "."
       $Background/PurchaseDialog/YesButton.disabled = true
     
     $Background/PurchaseDialog.popup_centered()
