@@ -9,3 +9,11 @@ func _ready():
 
 func _on_NextButton_button_down():
     main.change_scene("setting")
+
+
+func _on_HowToPlayButton_button_down():
+    $Background/HowToPlayDialog.popup_centered()
+
+
+func _on_YesButton_button_down():
+    $Background/HowToPlayDialog.visible = false

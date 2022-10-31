@@ -4,6 +4,10 @@ var main
 
 func _ready():
     main = get_node("/root/Main")
+    $Header/Background/TitleLabel.text = "Select the Time"
+    $Header/Background/DayLabel.visible = false
+    $Header/Background/SubscriberLabel.visible = false
+    $Header/Background/MoneyLabel.visible = false
 
 func _on_BackButton_button_down():
     main.change_scene("title")

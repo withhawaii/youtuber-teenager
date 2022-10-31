@@ -1,0 +1,105 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0.6, 0.2, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0.670588, 0.741176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0.6, 0.866667, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.631373, 0.780392, 0.878431, 1 )
+
+[node name="Chart" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 500.0
+margin_bottom = 300.0
+color = Color( 0.666667, 0.611765, 0.611765, 1 )
+
+[node name="PhysicalPointsBar" type="ProgressBar" parent="Background"]
+margin_left = 180.0
+margin_top = 37.0
+margin_right = 480.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/fg = SubResource( 2 )
+value = 50.0
+
+[node name="PhysicalPoiintsLabel" type="Label" parent="Background"]
+margin_left = 20.0
+margin_top = 37.0
+margin_right = 170.0
+margin_bottom = 69.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Physical Pts:"
+align = 2
+
+[node name="MentlPointsBar" type="ProgressBar" parent="Background"]
+margin_left = 180.0
+margin_top = 102.0
+margin_right = 480.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/fg = SubResource( 4 )
+value = 50.0
+
+[node name="MentalPoiintsLabel" type="Label" parent="Background"]
+margin_left = 20.0
+margin_top = 102.0
+margin_right = 170.0
+margin_bottom = 134.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Mental Pts:"
+align = 2
+
+[node name="SchoolPointsBar" type="ProgressBar" parent="Background"]
+margin_left = 180.0
+margin_top = 167.0
+margin_right = 480.0
+margin_bottom = 197.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/fg = SubResource( 5 )
+value = 50.0
+
+[node name="SchoolPoiintsLabel" type="Label" parent="Background"]
+margin_left = 20.0
+margin_top = 167.0
+margin_right = 170.0
+margin_bottom = 199.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "School Pts:"
+align = 2
+
+[node name="SocialPointsBar" type="ProgressBar" parent="Background"]
+margin_left = 180.0
+margin_top = 233.0
+margin_right = 480.0
+margin_bottom = 263.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/fg = SubResource( 6 )
+value = 50.0
+
+[node name="SocialPoiintsLabel" type="Label" parent="Background"]
+margin_left = 20.0
+margin_top = 233.0
+margin_right = 170.0
+margin_bottom = 265.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Social Pts:"
+align = 2

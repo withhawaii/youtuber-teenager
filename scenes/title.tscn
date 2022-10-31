@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/title.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/title_scene.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=2]
 size = 33
@@ -10,6 +11,17 @@ font_data = ExtResource( 1 )
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.129412, 0.0666667, 0.890196, 1 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.184314, 0.027451, 0.945098, 1 )
+
 [node name="Title" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -17,13 +29,60 @@ script = ExtResource( 2 )
 margin_right = 1000.0
 margin_bottom = 600.0
 
-[node name="NextButton" type="Button" parent="."]
-margin_left = 601.0
-margin_top = 499.0
-margin_right = 801.0
-margin_bottom = 549.0
+[node name="Sprite" type="Sprite" parent="Background"]
+position = Vector2( 500, 300 )
+texture = ExtResource( 3 )
+
+[node name="NextButton" type="Button" parent="Background"]
+margin_left = 606.0
+margin_top = 480.0
+margin_right = 806.0
+margin_bottom = 530.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
-text = "Next"
+text = "Start"
 
-[connection signal="button_down" from="NextButton" to="." method="_on_NextButton_button_down"]
+[node name="HowToPlayButton" type="Button" parent="Background"]
+margin_left = 192.0
+margin_top = 480.0
+margin_right = 392.0
+margin_bottom = 530.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "How to Play"
+
+[node name="HowToPlayDialog" type="WindowDialog" parent="Background"]
+margin_left = 181.0
+margin_top = 38.0
+margin_right = 824.0
+margin_bottom = 557.0
+window_title = "How to play"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/HowToPlayDialog"]
+margin_left = 26.0
+margin_top = 14.0
+margin_right = 626.0
+margin_bottom = 414.0
+
+[node name="InstructionText" type="Label" parent="Background/HowToPlayDialog/ScrollContainer"]
+margin_right = 580.0
+margin_bottom = 477.0
+rect_min_size = Vector2( 580, 0 )
+custom_fonts/font = SubResource( 4 )
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+autowrap = true
+
+[node name="YesButton" type="Button" parent="Background/HowToPlayDialog"]
+anchor_right = 0.159
+anchor_bottom = 0.314
+margin_left = 411.0
+margin_top = 429.0
+margin_right = 507.014
+margin_bottom = 331.106
+custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "Got it!"
+
+[connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]
+[connection signal="button_down" from="Background/HowToPlayButton" to="." method="_on_HowToPlayButton_button_down"]
+[connection signal="button_down" from="Background/HowToPlayDialog/YesButton" to="." method="_on_YesButton_button_down"]

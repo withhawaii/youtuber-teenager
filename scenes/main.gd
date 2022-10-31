@@ -14,8 +14,10 @@ var mental_points
 var school_points
 var social_points
 var subscribers
+var previous_subscribers
 var money
-var happyness_points
+var previous_money
+var happiness_points
 
 # Current hour allocations
 var school_hours
@@ -40,8 +42,10 @@ func init_variables():
     school_points = 50
     social_points = 50
     subscribers = 0
+    previous_subscribers = subscribers
     money = 100000
-    happyness_points = 0
+    previous_money = money
+    happiness_points = 0
     school_hours = 0
     socialize_hours = 0
     eat_hours = 0
