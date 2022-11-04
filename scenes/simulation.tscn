@@ -147,14 +147,14 @@ visible = false
 position = Vector2( 162, 108 )
 scale = Vector2( 0.449219, 0.428711 )
 frames = SubResource( 6 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="Sleeping" type="AnimatedSprite" parent="Background/Animation"]
 position = Vector2( 155, 109 )
 scale = Vector2( 0.267334, 0.250854 )
 frames = SubResource( 7 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="Studying" type="AnimatedSprite" parent="Background/Animation"]
@@ -169,7 +169,7 @@ visible = false
 position = Vector2( 156.062, 128.187 )
 scale = Vector2( 0.62085, 0.442139 )
 frames = SubResource( 9 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="TimerLabel" type="Label" parent="Background/Animation"]

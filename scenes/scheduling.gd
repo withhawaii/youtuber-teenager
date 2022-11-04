@@ -15,7 +15,7 @@ func _ready():
     
 func _on_NextButton_button_down():
     main.play_effect("click")
-    main.change_scene("simulation")
+    $Background/ConfirmationDialog.visible = true
 
 func _on_BackButton_button_down():
     main.play_effect("click")
@@ -54,3 +54,12 @@ func _on_SleepHoursSlider_drag_ended(value_changed):
 func _on_YoutubeHoursSlider_drag_ended(value_changed):
     main.youtube_hours = $Background/YoutubeHoursSlider.value
     update_screen()
+
+func _on_YesButton_button_down():    
+    main.play_effect("click")
+    $Background/ConfirmationDialog.visible = false
+    main.change_scene("simulation")
+
+func _on_NoButton_button_down():
+    main.play_effect("click")
+    $Background/ConfirmationDialog.visible = false
