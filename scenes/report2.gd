@@ -17,4 +17,5 @@ func _on_NextButton_button_down():
       main.change_scene("purchasing")
 
 func _on_BackButton_button_down():
+    main.play_click()
     main.change_scene("report1")

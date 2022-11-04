@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/title.gd" type="Script" id=2]
-[ext_resource path="res://assets/images/title_scene.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/title_background.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/title_logo.JPG" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 33
@@ -29,7 +30,7 @@ script = ExtResource( 2 )
 margin_right = 1000.0
 margin_bottom = 600.0
 
-[node name="Sprite" type="Sprite" parent="Background"]
+[node name="TitleBackground" type="Sprite" parent="Background"]
 position = Vector2( 500, 300 )
 texture = ExtResource( 3 )
 
@@ -82,6 +83,11 @@ margin_bottom = 331.106
 custom_fonts/font = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 text = "Got it!"
+
+[node name="TitleLogo" type="Sprite" parent="Background"]
+position = Vector2( 500, 250 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 4 )
 
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="button_down" from="Background/HowToPlayButton" to="." method="_on_HowToPlayButton_button_down"]

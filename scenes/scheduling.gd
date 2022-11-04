@@ -6,17 +6,19 @@ var total_hours
 # Called when the node enters the scene tree for the first time.
 func _ready():
     main = get_node("/root/Main")
-    main.school_hours = 0
-    main.socialize_hours = 0
-    main.eat_hours = 0
-    main.sleep_hours = 0
-    main.youtube_hours = 0
+    main.school_hours = 4
+    main.socialize_hours = 4
+    main.eat_hours = 4
+    main.sleep_hours = 4
+    main.youtube_hours = 8
     update_screen()
     
 func _on_NextButton_button_down():
+    main.play_click()
     main.change_scene("simulation")
 
 func _on_BackButton_button_down():
+    main.play_click()
     main.change_scene("purchasing")
 
 func update_screen():

@@ -12,8 +12,9 @@ func _on_NextButton_button_down():
 
 
 func _on_HowToPlayButton_button_down():
+    main.play_click()
     $Background/HowToPlayDialog.popup_centered()
 
-
 func _on_YesButton_button_down():
+    main.play_click()
     $Background/HowToPlayDialog.visible = false

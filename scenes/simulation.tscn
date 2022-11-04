@@ -1,8 +1,53 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/simulation.gd" type="Script" id=2]
 [ext_resource path="res://scenes/header.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/chart.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/images/world_map.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/hangingout_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/hangingout_5.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/hangingout_10.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/hangingout_11.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/hangingout_7.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/hangingout_9.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/sleeping_6.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/hangingout_2.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/hangingout_1.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/hangingout_8.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/sleeping_4.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/sleeping_5.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/eating_2.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/eating_3.png" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/eating_4.png" type="Texture" id=20]
+[ext_resource path="res://assets/sprites/eating_5.png" type="Texture" id=21]
+[ext_resource path="res://assets/sprites/sleeping_0.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/sleeping_2.png" type="Texture" id=23]
+[ext_resource path="res://assets/sprites/hangingout_0.png" type="Texture" id=24]
+[ext_resource path="res://assets/sprites/hangingout_4.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/hangingout_6.png" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/sleeping_7.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/sleeping_1.png" type="Texture" id=28]
+[ext_resource path="res://assets/sprites/eating_1.png" type="Texture" id=29]
+[ext_resource path="res://assets/sprites/sleeping_3.png" type="Texture" id=30]
+[ext_resource path="res://assets/sprites/eating_0.png" type="Texture" id=31]
+[ext_resource path="res://assets/sprites/youtubing_5.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/youtubing_2.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/youtubing_1.png" type="Texture" id=34]
+[ext_resource path="res://assets/sprites/studying_6.png" type="Texture" id=35]
+[ext_resource path="res://assets/sprites/studying_7.png" type="Texture" id=36]
+[ext_resource path="res://assets/sprites/youtubing_4.png" type="Texture" id=37]
+[ext_resource path="res://assets/sprites/youtubing_6.png" type="Texture" id=38]
+[ext_resource path="res://assets/sprites/studying_1.png" type="Texture" id=39]
+[ext_resource path="res://assets/sprites/studying_2.png" type="Texture" id=40]
+[ext_resource path="res://assets/sprites/studying_3.png" type="Texture" id=41]
+[ext_resource path="res://assets/sprites/studying_8.png" type="Texture" id=42]
+[ext_resource path="res://assets/sprites/studying_9.png" type="Texture" id=43]
+[ext_resource path="res://assets/sprites/studying_5.png" type="Texture" id=44]
+[ext_resource path="res://assets/sprites/studying_0.png" type="Texture" id=45]
+[ext_resource path="res://assets/sprites/youtubing_3.png" type="Texture" id=46]
+[ext_resource path="res://assets/sprites/studying_4.png" type="Texture" id=47]
+[ext_resource path="res://assets/sprites/youtubing_0.png" type="Texture" id=48]
 
 [sub_resource type="DynamicFont" id=2]
 size = 33
@@ -11,42 +56,71 @@ font_data = ExtResource( 1 )
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.129412, 0.0666667, 0.890196, 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
+size = 18
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 1, 0.6, 0.2, 1 )
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 31 ), ExtResource( 29 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
-[sub_resource type="DynamicFont" id=7]
-font_data = ExtResource( 1 )
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 25 ), ExtResource( 7 ), ExtResource( 26 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0, 0.670588, 0.741176, 1 )
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
-[sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0, 0.6, 0.866667, 1 )
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 45 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 47 ), ExtResource( 44 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 42 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
-[sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0.631373, 0.780392, 0.878431, 1 )
-
-[sub_resource type="DynamicFont" id=11]
-size = 24
-font_data = ExtResource( 1 )
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 48 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 46 ), ExtResource( 37 ), ExtResource( 32 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Simulation" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="Timer" type="Timer" parent="."]
+
 [node name="Background" type="ColorRect" parent="."]
-margin_left = 1.0
-margin_top = -1.0
-margin_right = 1001.0
-margin_bottom = 599.0
+margin_top = -3.0
+margin_right = 1000.0
+margin_bottom = 597.0
 color = Color( 0.254902, 0.588235, 0.878431, 1 )
+
+[node name="WorldMap" type="Sprite" parent="Background"]
+position = Vector2( 419, 300 )
+scale = Vector2( 1.02125, 1.5407 )
+texture = ExtResource( 5 )
 
 [node name="Header" parent="Background" instance=ExtResource( 3 )]
 position = Vector2( -1, 1 )
 
 [node name="NextButton" type="Button" parent="Background"]
+visible = false
 margin_left = 888.0
 margin_top = 523.0
 margin_right = 968.0
@@ -55,97 +129,57 @@ custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 text = "Skip"
 
-[node name="StatusArea" type="ColorRect" parent="."]
-margin_left = 26.0
-margin_top = 122.0
-margin_right = 365.0
-margin_bottom = 311.0
-color = Color( 0.666667, 0.611765, 0.611765, 1 )
+[node name="StatusChart" parent="Background" instance=ExtResource( 4 )]
+position = Vector2( 580, 358 )
+scale = Vector2( 0.75, 0.75 )
 
-[node name="PhysicalPointsBar" type="ProgressBar" parent="StatusArea"]
-margin_left = 111.0
-margin_top = 59.0
-margin_right = 315.0
-margin_bottom = 80.0
-custom_fonts/font = SubResource( 5 )
-custom_styles/fg = SubResource( 6 )
-value = 50.0
-
-[node name="PhysicalPoiintsLabel" type="Label" parent="StatusArea"]
-margin_left = 17.0
-margin_top = 61.0
-margin_right = 107.0
-margin_bottom = 82.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 7 )
-text = "Physical Pts:"
+[node name="TimerLabel" type="Label" parent="Background"]
+margin_left = 796.0
+margin_top = 113.0
+margin_right = 906.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 4 )
 align = 2
 
-[node name="MentlPointsBar" type="ProgressBar" parent="StatusArea"]
-margin_left = 111.0
-margin_top = 88.0
-margin_right = 315.0
-margin_bottom = 109.0
-custom_fonts/font = SubResource( 5 )
-custom_styles/fg = SubResource( 8 )
-value = 50.0
+[node name="Eating" type="AnimatedSprite" parent="Background"]
+visible = false
+position = Vector2( 857, 224 )
+scale = Vector2( 0.195557, 0.197754 )
+frames = SubResource( 5 )
+frame = 5
+playing = true
 
-[node name="MentalPoiintsLabel" type="Label" parent="StatusArea"]
-margin_left = 26.0
-margin_top = 88.0
-margin_right = 107.0
-margin_bottom = 109.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 7 )
-text = "Mental Pts:"
-align = 2
+[node name="HangingOut" type="AnimatedSprite" parent="Background"]
+visible = false
+position = Vector2( 859, 244 )
+scale = Vector2( 0.449219, 0.428711 )
+frames = SubResource( 6 )
+frame = 9
+playing = true
 
-[node name="SchoolPointsBar" type="ProgressBar" parent="StatusArea"]
-margin_left = 111.0
-margin_top = 118.0
-margin_right = 315.0
-margin_bottom = 139.0
-custom_fonts/font = SubResource( 5 )
-custom_styles/fg = SubResource( 9 )
-value = 50.0
+[node name="Sleeping" type="AnimatedSprite" parent="Background"]
+visible = false
+position = Vector2( 855.125, 230.562 )
+scale = Vector2( 0.267334, 0.250854 )
+frames = SubResource( 7 )
+frame = 3
+playing = true
 
-[node name="SchoolPoiintsLabel" type="Label" parent="StatusArea"]
-margin_left = 23.0
-margin_top = 119.0
-margin_right = 104.0
-margin_bottom = 140.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 7 )
-text = "School Pts:"
-align = 2
+[node name="Studying" type="AnimatedSprite" parent="Background"]
+visible = false
+position = Vector2( 847, 231 )
+scale = Vector2( 0.84375, 0.832031 )
+frames = SubResource( 8 )
+frame = 2
+playing = true
 
-[node name="SocialPointsBar" type="ProgressBar" parent="StatusArea"]
-margin_left = 111.0
-margin_top = 148.0
-margin_right = 315.0
-margin_bottom = 169.0
-custom_fonts/font = SubResource( 5 )
-custom_styles/fg = SubResource( 10 )
-value = 50.0
+[node name="Youtubing" type="AnimatedSprite" parent="Background"]
+visible = false
+position = Vector2( 832, 237 )
+scale = Vector2( 0.620606, 0.446777 )
+frames = SubResource( 9 )
+frame = 3
+playing = true
 
-[node name="SocialPoiintsLabel" type="Label" parent="StatusArea"]
-margin_left = 29.0
-margin_top = 147.0
-margin_right = 104.0
-margin_bottom = 168.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 7 )
-text = "Social Pts:"
-align = 2
-
-[node name="Label" type="Label" parent="StatusArea"]
-margin_left = 105.0
-margin_top = 16.0
-margin_right = 230.0
-margin_bottom = 47.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 11 )
-text = "Your Status"
-align = 1
-
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]
