@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/report1.gd" type="Script" id=2]
-[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/images/trophy_cup.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=2]
@@ -24,9 +23,6 @@ script = ExtResource( 2 )
 margin_top = -1.0
 margin_right = 1000.0
 margin_bottom = 599.0
-
-[node name="Header" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( -1, 1 )
 
 [node name="NextButton" type="Button" parent="Background"]
 margin_left = 600.0

@@ -11,10 +11,10 @@ var youtube_end_time
 
 func _ready():
     main = get_node("/root/Main")
-    $Background/Header/Background.color = "00ffffff"
-    $Background/Header/Background/TitleLabel.text = ""
-    $Background/Header.update_screen()
-    
+    main.get_node("Header").color = "00ffffff"
+    main.get_node("Header/TitleLabel").text = ""
+    main.update_header()
+    $Background/Chart.init_chart()
     sleep_end_time = total_time * main.sleep_hours / 24
     eat_end_time = total_time * main.eat_hours / 24 + sleep_end_time
     school_end_time = total_time * main.school_hours / 24 + eat_end_time
@@ -55,8 +55,8 @@ func _on_Timer_timeout():
         main.stop_music()
         $Timer.stop()
         main.change_scene("report1")
-    $Background/StatusChart.update_screen()
-    $Background/Header.update_screen()
+    $Background/Chart.update_screen()
+    main.update_header()
 
 func update_sleeping(elapsed_time):
     if elapsed_time <= 8 * 3:
@@ -77,10 +77,10 @@ func update_socializing(elapsed_time):
     if main.money > 0:
         main.social_points =  main.social_points + 3
         main.mental_points = main.mental_points + 1
-        main.money = main.money - 1
+        main.money = main.money - 10
     
 func update_youtubing(elapsed_time):
-    main.subscribers = main.social_points + 3
+    main.subscribers = main.subscribers + 3
     
 func change_animation(activity):
     $Background/Animation/Eating.visible = false

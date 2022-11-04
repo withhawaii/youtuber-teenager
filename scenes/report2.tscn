@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/report2.gd" type="Script" id=2]
-[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/chart.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/icons/normal.png" type="Texture" id=5]
 [ext_resource path="res://assets/icons/sad.png" type="Texture" id=6]
@@ -38,8 +37,6 @@ margin_top = -1.0
 margin_right = 1001.0
 margin_bottom = 599.0
 
-[node name="Header" parent="Background" instance=ExtResource( 3 )]
-
 [node name="NextButton" type="Button" parent="Background"]
 margin_left = 600.0
 margin_top = 500.0
@@ -62,7 +59,7 @@ text = "Back"
 position = Vector2( 758, 329 )
 scale = Vector2( 0.479492, 0.463867 )
 frames = SubResource( 4 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="MessageLabel" type="Label" parent="Background"]
@@ -75,8 +72,8 @@ custom_fonts/font = SubResource( 5 )
 text = "Message"
 align = 1
 
-[node name="Chart" parent="." instance=ExtResource( 4 )]
-position = Vector2( 90, 187 )
+[node name="Chart" parent="Background" instance=ExtResource( 4 )]
+position = Vector2( 89, 188 )
 scale = Vector2( 0.9, 0.9 )
 
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]

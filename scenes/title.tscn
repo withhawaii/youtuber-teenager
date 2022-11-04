@@ -77,9 +77,9 @@ autowrap = true
 anchor_right = 0.159
 anchor_bottom = 0.314
 margin_left = 411.0
-margin_top = 429.0
-margin_right = 507.014
-margin_bottom = 331.106
+margin_top = 435.0
+margin_right = 508.763
+margin_bottom = 322.034
 custom_fonts/font = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 text = "Got it!"
@@ -88,8 +88,6 @@ text = "Got it!"
 position = Vector2( 500, 250 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 4 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="button_down" from="Background/HowToPlayButton" to="." method="_on_HowToPlayButton_button_down"]

@@ -1,8 +1,7 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/simulation.gd" type="Script" id=2]
-[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/chart.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/images/world_map.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/hangingout_3.png" type="Texture" id=6]
@@ -116,10 +115,7 @@ position = Vector2( 527.25, 300 )
 scale = Vector2( 1.29187, 1.5407 )
 texture = ExtResource( 5 )
 
-[node name="Header" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( -1, 1 )
-
-[node name="StatusChart" parent="Background" instance=ExtResource( 4 )]
+[node name="Chart" parent="Background" instance=ExtResource( 4 )]
 position = Vector2( 250, 21 )
 
 [node name="NextButton" type="Button" parent="Background"]
@@ -143,7 +139,7 @@ visible = false
 position = Vector2( 163, 116 )
 scale = Vector2( 0.195557, 0.197754 )
 frames = SubResource( 5 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="HangingOut" type="AnimatedSprite" parent="Background/Animation"]
@@ -151,15 +147,14 @@ visible = false
 position = Vector2( 162, 108 )
 scale = Vector2( 0.449219, 0.428711 )
 frames = SubResource( 6 )
-frame = 11
+frame = 1
 playing = true
 
 [node name="Sleeping" type="AnimatedSprite" parent="Background/Animation"]
-visible = false
 position = Vector2( 155, 109 )
 scale = Vector2( 0.267334, 0.250854 )
 frames = SubResource( 7 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="Studying" type="AnimatedSprite" parent="Background/Animation"]
@@ -167,15 +162,14 @@ visible = false
 position = Vector2( 165, 110 )
 scale = Vector2( 0.84375, 0.832031 )
 frames = SubResource( 8 )
-frame = 2
 playing = true
 
 [node name="Youtubing" type="AnimatedSprite" parent="Background/Animation"]
 visible = false
-position = Vector2( 156, 127 )
-scale = Vector2( 0.620606, 0.446777 )
+position = Vector2( 156.062, 128.187 )
+scale = Vector2( 0.62085, 0.442139 )
 frames = SubResource( 9 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="TimerLabel" type="Label" parent="Background/Animation"]

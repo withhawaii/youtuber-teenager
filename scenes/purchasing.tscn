@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/purchasing.gd" type="Script" id=2]
-[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/icons/camera.png" type="Texture" id=3]
+[ext_resource path="res://assets/icons/microphone.png" type="Texture" id=4]
+[ext_resource path="res://assets/icons/software.png" type="Texture" id=5]
+[ext_resource path="res://assets/icons/computer.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=15]
 size = 18
@@ -51,8 +54,6 @@ margin_right = 1001.0
 margin_bottom = 599.0
 theme = SubResource( 8 )
 
-[node name="Header" parent="Background" instance=ExtResource( 3 )]
-
 [node name="NextButton" type="Button" parent="Background"]
 margin_left = 739.0
 margin_top = 509.0
@@ -72,6 +73,10 @@ custom_fonts/font = SubResource( 4 )
 text = "Computer: Lv"
 align = 2
 
+[node name="ComptuerIcon" type="Sprite" parent="Background/ComputerLabel"]
+position = Vector2( 108, 23 )
+texture = ExtResource( 6 )
+
 [node name="SoftwareLabel" type="Label" parent="Background"]
 margin_left = 69.0
 margin_top = 237.0
@@ -81,6 +86,10 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Editing Software: Lv"
 align = 2
+
+[node name="SoftwareIcon" type="Sprite" parent="Background/SoftwareLabel"]
+position = Vector2( 107, 21 )
+texture = ExtResource( 5 )
 
 [node name="CameraLabel" type="Label" parent="Background"]
 margin_left = 142.0
@@ -92,6 +101,10 @@ custom_fonts/font = SubResource( 4 )
 text = "Video Camera: Lv"
 align = 2
 
+[node name="CameraIcon" type="Sprite" parent="Background/CameraLabel"]
+position = Vector2( 75, 21 )
+texture = ExtResource( 3 )
+
 [node name="MicrophoneLabel" type="Label" parent="Background"]
 margin_left = 173.0
 margin_top = 377.0
@@ -101,6 +114,10 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Microphone: Lv"
 align = 2
+
+[node name="MicrophoneIcon" type="Sprite" parent="Background/MicrophoneLabel"]
+position = Vector2( 81, 24 )
+texture = ExtResource( 4 )
 
 [node name="ComputerLv" type="Label" parent="Background"]
 margin_left = 546.0

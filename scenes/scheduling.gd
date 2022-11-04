@@ -22,8 +22,8 @@ func _on_BackButton_button_down():
     main.change_scene("purchasing")
 
 func update_screen():
-    $Background/Header/Background/TitleLabel.text = "Set Your Schedule"
-    $Background/Header.update_screen()
+    main.get_node("Header/TitleLabel").text = "Set Your Schedule"
+    main.update_header()
     total_hours = main.school_hours + main.socialize_hours + main.eat_hours + main.sleep_hours + main.youtube_hours
     if total_hours == 24:
         $Background/RemainingHoursLabel.text = "You are good to go!"

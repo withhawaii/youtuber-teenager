@@ -29,7 +29,6 @@ var youtube_hours
 # Called when the node enters the scene tree for the first time.
 func _ready():
     change_scene("title")
-#    change_scene("scheduling")
 
 func init_variables():
     total_days = 0
@@ -54,13 +53,18 @@ func init_variables():
     youtube_hours = 0
 
 func change_scene(name):
-    var current_scene = $Content.get_child(0)
+    var current_scene = $Body.get_child(0)
     remove_child(current_scene)
     var new_scene = load("res://scenes/" + name + ".tscn").instance()
-    $Content.add_child(new_scene)
+    $Body.add_child(new_scene)
     
 func is_no_more_days_left():
     return current_day >= total_days
+
+func update_header():
+    $Header/DayLabel.text = "Day: " + str(current_day) + " of " + str(total_days)
+    $Header/MoneyLabel.text = "Money: $" + str(money)
+    $Header/SubscriberLabel.text = "Subscribers: " + str(subscribers)
 
 func play_effect(name):
     $EffectPlayer.stream = load("res://assets/sounds/" + name +".wav")

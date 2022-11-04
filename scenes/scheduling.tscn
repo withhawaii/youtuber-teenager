@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/scheduling.gd" type="Script" id=2]
 [ext_resource path="res://addons/SliderLabel/SliderLabel.gd" type="Script" id=3]
-[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 33
@@ -32,9 +31,6 @@ margin_left = 1.0
 margin_top = -1.0
 margin_right = 1001.0
 margin_bottom = 599.0
-
-[node name="Header" parent="Background" instance=ExtResource( 4 )]
-position = Vector2( -1, 1 )
 
 [node name="NextButton" type="Button" parent="Background"]
 margin_left = 600.0

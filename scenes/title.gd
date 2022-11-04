@@ -5,6 +5,7 @@ var main
 # Called when the node enters the scene tree for the first time.
 func _ready():
     main = get_node("/root/Main")
+    main.get_node("Header").visible = false
     main.init_variables()
 
 func _on_NextButton_button_down():

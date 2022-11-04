@@ -4,10 +4,11 @@ var main
 
 func _ready():
     main = get_node("/root/Main")
-    $Header/Background/TitleLabel.text = "Select the Time"
-    $Header/Background/DayLabel.visible = false
-    $Header/Background/SubscriberLabel.visible = false
-    $Header/Background/MoneyLabel.visible = false
+    main.get_node("Header/TitleLabel").text = "Select the Time"
+    main.get_node("Header/DayLabel").visible = false
+    main.get_node("Header/SubscriberLabel").visible = false
+    main.get_node("Header/MoneyLabel").visible = false
+    main.get_node("Header").visible = true
 
 func _on_BackButton_button_down():
     main.play_effect("click")

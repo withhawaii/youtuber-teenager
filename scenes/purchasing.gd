@@ -8,11 +8,14 @@ var upgrade_level
 # Called when the node enters the scene tree for the first time.
 func _ready():
     main = get_node("/root/Main")
+    main.get_node("Header/TitleLabel").text = "Your Equipments"
+    main.get_node("Header/DayLabel").visible = true
+    main.get_node("Header/SubscriberLabel").visible = true
+    main.get_node("Header/MoneyLabel").visible = true
     update_screen()
    
 func update_screen():
-    $Background/Header/Background/TitleLabel.text = "Your Equipments"
-    $Background/Header.update_screen()
+    main.update_header()
     $Background/ComputerLv.text = str(main.computer_level)
     $Background/SoftwareLv.text = str(main.software_level)
     $Background/CameraLv.text = str(main.camera_level)

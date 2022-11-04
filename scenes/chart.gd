@@ -4,6 +4,12 @@ var main
 
 func _ready():
     main = get_node("/root/Main")
+    
+func init_chart():
+  $Background/PhysicalPointsBar.value = main.physical_points
+  $Background/MentalPointsBar.value = main.mental_points  
+  $Background/SchoolPointsBar.value = main.school_points  
+  $Background/SocialPointsBar.value = main.social_points  
 
 func update_screen():
   $Tween.interpolate_property($Background/PhysicalPointsBar, "value", $Background/PhysicalPointsBar.value, main.physical_points, 1, Tween.TRANS_LINEAR, Tween.EASE_IN)
