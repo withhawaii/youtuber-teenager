@@ -89,6 +89,8 @@ position = Vector2( 500, 250 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 4 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="button_down" from="Background/HowToPlayButton" to="." method="_on_HowToPlayButton_button_down"]
 [connection signal="button_down" from="Background/HowToPlayDialog/YesButton" to="." method="_on_YesButton_button_down"]

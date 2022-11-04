@@ -8,13 +8,15 @@ func _ready():
     main.init_variables()
 
 func _on_NextButton_button_down():
+    main.play_effect("click")
     main.change_scene("setting")
 
 
 func _on_HowToPlayButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     $Background/HowToPlayDialog.popup_centered()
 
 func _on_YesButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     $Background/HowToPlayDialog.visible = false
+

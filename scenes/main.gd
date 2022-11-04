@@ -54,40 +54,22 @@ func init_variables():
     youtube_hours = 0
 
 func change_scene(name):
-    var current_scene = get_child(0)
+    var current_scene = $Content.get_child(0)
     remove_child(current_scene)
     var new_scene = load("res://scenes/" + name + ".tscn").instance()
-    add_child(new_scene)
+    $Content.add_child(new_scene)
     
-func play_click():
-    $AudioStreamPlayer.stream = load("res://assets/sounds/clicking.wav")
-    $AudioStreamPlayer.play()
-
 func is_no_more_days_left():
     return current_day >= total_days
 
-func update_physical_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
-    # A sample implementation
+func play_effect(name):
+    $EffectPlayer.stream = load("res://assets/sounds/" + name +".wav")
+    return $EffectPlayer.play()
 
-    # If there is no sleep, take out 20 points. 
-    if sleep_hours == 0:
-        physical_points = physical_points - 20
-    # If sleep hours are between 1 and 8, points will be recovered based on hours.
-    elif sleep_hours > 0 and sleep_hours <= 8:
-        physical_points = physical_points + sleep_hours * 10
-    # If sleep hours are more than 8, 80 points will be recovered as 8 sleep hours are max.
-    else:
-        physical_points = physical_points + 8 * 10
-
-    # If eat hours are more than 1, 20 points will be recovered.
-    if eat_hours > 0:
-        physical_points = physical_points + 20
-
-func update_mental_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
-    pass
-
-func update_school_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
-    pass
-
-func update_social_points(study_hours, socialize_hours, sleep_hours, eat_hours, youtube_hours):
-    pass
+func play_music(name):
+    $MusicPlayer.stream = load("res://assets/sounds/" + name +".wav")
+    return $MusicPlayer.play()
+    
+func stop_music():
+    $MusicPlayer.stop()
+       

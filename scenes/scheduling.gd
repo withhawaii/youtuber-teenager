@@ -14,11 +14,11 @@ func _ready():
     update_screen()
     
 func _on_NextButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     main.change_scene("simulation")
 
 func _on_BackButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     main.change_scene("purchasing")
 
 func update_screen():

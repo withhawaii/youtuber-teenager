@@ -36,14 +36,14 @@ func update_PurchaseDialog():
     $Background/PurchaseDialog.popup_centered()
     
 func _on_ComputerUpgradeButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     upgrade_item = "Computer"
     upgrade_cost = main.computer_level * 1000
     upgrade_level = main.computer_level + 1
     update_PurchaseDialog()
     
 func _on_SoftwareUpgradeButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     upgrade_item = "Editing Software"
     upgrade_cost = main.software_level * 500
     upgrade_level = main.software_level + 1
@@ -51,7 +51,7 @@ func _on_SoftwareUpgradeButton_button_down():
 
 
 func _on_CameraUpgradeButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     upgrade_item = "Video Camera"
     upgrade_cost = main.camera_level * 100
     upgrade_level = main.camera_level + 1
@@ -59,14 +59,14 @@ func _on_CameraUpgradeButton_button_down():
 
 
 func _on_MicrophoneUpgrdeButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     upgrade_item = "Microphone"
     upgrade_cost = main.microphone_level * 50
     upgrade_level = main.microphone_level + 1
     update_PurchaseDialog()
 
 func _on_YesButton_button_down():
-    main.play_click()
+    main.play_effect("purchase")
     if upgrade_item == "Computer":
       main.computer_level = main.computer_level + 1
       main.money = main.money - upgrade_cost
@@ -84,9 +84,9 @@ func _on_YesButton_button_down():
     update_screen()
 
 func _on_NoButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     $Background/PurchaseDialog.visible = false
 
 func _on_NextButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     main.change_scene("scheduling")

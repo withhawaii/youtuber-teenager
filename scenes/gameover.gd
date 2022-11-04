@@ -12,5 +12,5 @@ func _ready():
     $Background/HappinessNumLabel.text = str(main.happiness_points)
     
 func _on_NextButton_button_down():
-    main.play_click()
+    main.play_effect("click")
     main.change_scene("title")
