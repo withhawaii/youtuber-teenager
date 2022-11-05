@@ -13,6 +13,7 @@ var physical_points
 var mental_points
 var school_points
 var social_points
+var youtuber_points
 var subscribers
 var previous_subscribers
 var money
@@ -63,8 +64,8 @@ func is_no_more_days_left():
 
 func update_header():
     $Header/DayLabel.text = "Day: " + str(current_day) + " of " + str(total_days)
-    $Header/MoneyLabel.text = "Money: $" + str(money)
-    $Header/SubscriberLabel.text = "Subscribers: " + str(subscribers)
+    $Header/MoneyLabel.text = str(money)
+    $Header/SubscriberLabel.text = str(subscribers)
 
 func play_effect(name):
     $EffectPlayer.stream = load("res://assets/sounds/" + name +".wav")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=104 format=2]
 
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/simulation.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/thumbsup_30.png" type="Texture" id=3]
 [ext_resource path="res://scenes/chart.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/images/world_map.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/hangingout_3.png" type="Texture" id=6]
@@ -47,6 +48,67 @@
 [ext_resource path="res://assets/sprites/youtubing_3.png" type="Texture" id=46]
 [ext_resource path="res://assets/sprites/studying_4.png" type="Texture" id=47]
 [ext_resource path="res://assets/sprites/youtubing_0.png" type="Texture" id=48]
+[ext_resource path="res://assets/sprites/thumbsup_8.png" type="Texture" id=49]
+[ext_resource path="res://assets/sprites/thumbsup_9.png" type="Texture" id=50]
+[ext_resource path="res://assets/sprites/thumbsup_1.png" type="Texture" id=51]
+[ext_resource path="res://assets/sprites/thumbsup_2.png" type="Texture" id=52]
+[ext_resource path="res://assets/sprites/thumbsup_3.png" type="Texture" id=53]
+[ext_resource path="res://assets/sprites/thumbsup_4.png" type="Texture" id=54]
+[ext_resource path="res://assets/sprites/thumbsup_5.png" type="Texture" id=55]
+[ext_resource path="res://assets/sprites/thumbsup_6.png" type="Texture" id=56]
+[ext_resource path="res://assets/sprites/thumbsup_7.png" type="Texture" id=57]
+[ext_resource path="res://assets/sprites/thumbsup_10.png" type="Texture" id=58]
+[ext_resource path="res://assets/sprites/thumbsup_11.png" type="Texture" id=59]
+[ext_resource path="res://assets/sprites/thumbsup_12.png" type="Texture" id=60]
+[ext_resource path="res://assets/sprites/thumbsup_13.png" type="Texture" id=61]
+[ext_resource path="res://assets/sprites/thumbsup_14.png" type="Texture" id=62]
+[ext_resource path="res://assets/sprites/thumbsup_15.png" type="Texture" id=63]
+[ext_resource path="res://assets/sprites/thumbsup_16.png" type="Texture" id=64]
+[ext_resource path="res://assets/sprites/thumbsup_17.png" type="Texture" id=65]
+[ext_resource path="res://assets/sprites/thumbsup_18.png" type="Texture" id=66]
+[ext_resource path="res://assets/sprites/thumbsup_19.png" type="Texture" id=67]
+[ext_resource path="res://assets/sprites/thumbsup_20.png" type="Texture" id=68]
+[ext_resource path="res://assets/sprites/thumbsup_21.png" type="Texture" id=69]
+[ext_resource path="res://assets/sprites/thumbsup_22.png" type="Texture" id=70]
+[ext_resource path="res://assets/sprites/thumbsup_23.png" type="Texture" id=71]
+[ext_resource path="res://assets/sprites/thumbsup_24.png" type="Texture" id=72]
+[ext_resource path="res://assets/sprites/thumbsup_25.png" type="Texture" id=73]
+[ext_resource path="res://assets/sprites/thumbsup_26.png" type="Texture" id=74]
+[ext_resource path="res://assets/sprites/thumbsup_27.png" type="Texture" id=75]
+[ext_resource path="res://assets/sprites/thumbsup_28.png" type="Texture" id=76]
+[ext_resource path="res://assets/sprites/thumbsup_29.png" type="Texture" id=77]
+[ext_resource path="res://assets/sprites/thumbsup_35.png" type="Texture" id=78]
+[ext_resource path="res://assets/sprites/thumbsup_37.png" type="Texture" id=79]
+[ext_resource path="res://assets/sprites/thumbsup_36.png" type="Texture" id=80]
+[ext_resource path="res://assets/sprites/thumbsup_34.png" type="Texture" id=81]
+[ext_resource path="res://assets/sprites/thumbsup_31.png" type="Texture" id=82]
+[ext_resource path="res://assets/sprites/thumbsup_0.png" type="Texture" id=83]
+[ext_resource path="res://assets/sprites/thumbsup_33.png" type="Texture" id=84]
+[ext_resource path="res://assets/sprites/thumbsup_32.png" type="Texture" id=85]
+[ext_resource path="res://assets/sprites/heart_1.png" type="Texture" id=86]
+[ext_resource path="res://assets/sprites/heart_4.png" type="Texture" id=87]
+[ext_resource path="res://assets/sprites/heart_5.png" type="Texture" id=88]
+[ext_resource path="res://assets/sprites/heart_0.png" type="Texture" id=89]
+[ext_resource path="res://assets/sprites/heart_6.png" type="Texture" id=90]
+[ext_resource path="res://assets/sprites/heart_7.png" type="Texture" id=91]
+[ext_resource path="res://assets/sprites/heart_2.png" type="Texture" id=92]
+[ext_resource path="res://assets/sprites/heart_3.png" type="Texture" id=93]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 83 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 3 ), ExtResource( 82 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 81 ), ExtResource( 78 ), ExtResource( 80 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 89 ), ExtResource( 86 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 90 ), ExtResource( 91 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="DynamicFont" id=2]
 size = 18
@@ -115,6 +177,167 @@ position = Vector2( 527.25, 300 )
 scale = Vector2( 1.29187, 1.5407 )
 texture = ExtResource( 5 )
 
+[node name="Thumbsup1" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -247.897, 25.3132 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 36
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup2" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -218.482, 99.3055 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 35
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup3" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -181.326, 66.8527 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 35
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup4" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 256.798, -84.3773 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 34
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup5" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -77.6007, -7.7887 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 34
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup6" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 285.439, 90.8679 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 33
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup7" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -138.752, -153.826 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 33
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup8" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 148.428, -83.7282 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 33
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup9" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 200.291, -133.056 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 32
+speed_scale = 8.0
+playing = true
+
+[node name="Thumbsup10" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -313.693, -120.075 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 10 )
+frame = 31
+speed_scale = 8.0
+playing = true
+
+[node name="Heart1" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -312.918, -44.1358 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 6
+speed_scale = 2.0
+playing = true
+
+[node name="Heart2" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 253.702, -129.162 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 5
+speed_scale = 2.0
+playing = true
+
+[node name="Heart3" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 236.672, 89.5697 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 5
+speed_scale = 2.0
+playing = true
+
+[node name="Heart4" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -179.778, 35.6981 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 4
+speed_scale = 2.0
+playing = true
+
+[node name="Heart5" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -234.737, 51.2754 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 4
+speed_scale = 2.0
+playing = true
+
+[node name="Heart6" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 162.362, -126.566 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 3
+speed_scale = 2.0
+playing = true
+
+[node name="Heart7" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( 189.454, -45.4339 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="Heart8" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -207.645, -155.124 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="Heart9" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -53.6045, -39.5924 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+speed_scale = 2.0
+playing = true
+
+[node name="Heart10" type="AnimatedSprite" parent="Background/WorldMap"]
+position = Vector2( -265.7, -94.7621 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 11 )
+speed_scale = 2.0
+playing = true
+
+[node name="Timer" type="Timer" parent="Background/WorldMap"]
+wait_time = 2.0
+
 [node name="Chart" parent="Background" instance=ExtResource( 4 )]
 position = Vector2( 250, 21 )
 
@@ -139,7 +362,6 @@ visible = false
 position = Vector2( 163, 116 )
 scale = Vector2( 0.195557, 0.197754 )
 frames = SubResource( 5 )
-frame = 3
 playing = true
 
 [node name="HangingOut" type="AnimatedSprite" parent="Background/Animation"]
@@ -147,14 +369,14 @@ visible = false
 position = Vector2( 162, 108 )
 scale = Vector2( 0.449219, 0.428711 )
 frames = SubResource( 6 )
-frame = 7
+frame = 10
 playing = true
 
 [node name="Sleeping" type="AnimatedSprite" parent="Background/Animation"]
 position = Vector2( 155, 109 )
 scale = Vector2( 0.267334, 0.250854 )
 frames = SubResource( 7 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="Studying" type="AnimatedSprite" parent="Background/Animation"]
@@ -162,6 +384,7 @@ visible = false
 position = Vector2( 165, 110 )
 scale = Vector2( 0.84375, 0.832031 )
 frames = SubResource( 8 )
+frame = 5
 playing = true
 
 [node name="Youtubing" type="AnimatedSprite" parent="Background/Animation"]
@@ -169,7 +392,6 @@ visible = false
 position = Vector2( 156.062, 128.187 )
 scale = Vector2( 0.62085, 0.442139 )
 frames = SubResource( 9 )
-frame = 5
 playing = true
 
 [node name="TimerLabel" type="Label" parent="Background/Animation"]

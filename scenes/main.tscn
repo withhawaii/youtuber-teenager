@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/main.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/MADE TOMMY Regular_PERSONAL USE.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/icons/money.png" type="Texture" id=3]
+[ext_resource path="res://assets/icons/thumbup.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 54
@@ -53,21 +55,29 @@ text = "Day: 0 of 0"
 [node name="MoneyLabel" type="Label" parent="Header"]
 anchor_right = 0.026
 anchor_bottom = 0.44
-margin_left = 780.0
-margin_top = 54.0
-margin_right = 954.0
-margin_bottom = 42.0
+margin_left = 888.0
+margin_top = 53.0
+margin_right = 962.0
+margin_bottom = 41.0
 custom_fonts/font = SubResource( 3 )
-text = "$100"
-align = 2
+text = "100"
+
+[node name="MoneyIcon" type="Sprite" parent="Header/MoneyLabel"]
+position = Vector2( -19, 15 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
 
 [node name="SubscriberLabel" type="Label" parent="Header"]
 anchor_right = 0.026
 anchor_bottom = 0.44
-margin_left = 780.0
-margin_top = 17.0
-margin_right = 954.0
-margin_bottom = 5.0
+margin_left = 888.0
+margin_top = 16.0
+margin_right = 962.0
+margin_bottom = 4.0
 custom_fonts/font = SubResource( 3 )
 text = "0"
-align = 2
+
+[node name="SubscriberIcon" type="Sprite" parent="Header/SubscriberLabel"]
+position = Vector2( -19, 12 )
+scale = Vector2( 0.7, 0.57 )
+texture = ExtResource( 4 )

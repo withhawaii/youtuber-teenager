@@ -67,9 +67,9 @@ text = "Back"
 
 [node name="StudyHoursLabel" type="Label" parent="Background"]
 margin_left = 140.0
-margin_top = 176.0
+margin_top = 238.0
 margin_right = 360.0
-margin_bottom = 221.0
+margin_bottom = 283.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Study:"
@@ -79,9 +79,9 @@ align = 2
 anchor_left = 0.071
 anchor_right = 0.071
 margin_left = 309.0
-margin_top = 192.0
+margin_top = 254.0
 margin_right = 769.0
-margin_bottom = 212.0
+margin_bottom = 274.0
 max_value = 24.0
 
 [node name="SliderLabel" type="Label" parent="Background/SchoolHoursSlider"]
@@ -103,9 +103,9 @@ visibility_rule = 3
 
 [node name="SocializeHoursLabel" type="Label" parent="Background"]
 margin_left = 140.0
-margin_top = 236.0
+margin_top = 298.0
 margin_right = 360.0
-margin_bottom = 281.0
+margin_bottom = 343.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Hang around:"
@@ -115,9 +115,9 @@ align = 2
 anchor_left = 0.071
 anchor_right = 0.071
 margin_left = 309.0
-margin_top = 253.0
+margin_top = 315.0
 margin_right = 769.0
-margin_bottom = 273.0
+margin_bottom = 335.0
 max_value = 24.0
 
 [node name="SliderLabel" type="Label" parent="Background/SocializeHoursSlider"]
@@ -138,10 +138,10 @@ __meta__ = {
 visibility_rule = 3
 
 [node name="EatHoursLabel" type="Label" parent="Background"]
-margin_left = 140.0
-margin_top = 296.0
-margin_right = 360.0
-margin_bottom = 341.0
+margin_left = 139.0
+margin_top = 186.0
+margin_right = 359.0
+margin_bottom = 231.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Eat:"
@@ -150,10 +150,10 @@ align = 2
 [node name="EatHoursSlider" type="HSlider" parent="Background"]
 anchor_left = 0.071
 anchor_right = 0.071
-margin_left = 309.0
-margin_top = 311.0
-margin_right = 769.0
-margin_bottom = 331.0
+margin_left = 308.0
+margin_top = 201.0
+margin_right = 768.0
+margin_bottom = 221.0
 max_value = 24.0
 
 [node name="SliderLabel" type="Label" parent="Background/EatHoursSlider"]
@@ -175,9 +175,9 @@ visibility_rule = 3
 
 [node name="SleepHoursLabel" type="Label" parent="Background"]
 margin_left = 140.0
-margin_top = 358.0
+margin_top = 410.0
 margin_right = 360.0
-margin_bottom = 403.0
+margin_bottom = 455.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Sleep:"
@@ -187,9 +187,9 @@ align = 2
 anchor_left = 0.071
 anchor_right = 0.071
 margin_left = 309.0
-margin_top = 373.0
+margin_top = 425.0
 margin_right = 769.0
-margin_bottom = 393.0
+margin_bottom = 445.0
 max_value = 24.0
 
 [node name="SliderLabel" type="Label" parent="Background/SleepHoursSlider"]
@@ -211,9 +211,9 @@ visibility_rule = 3
 
 [node name="YoutubeHoursLabel" type="Label" parent="Background"]
 margin_left = 140.0
-margin_top = 422.0
+margin_top = 356.0
 margin_right = 360.0
-margin_bottom = 467.0
+margin_bottom = 401.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "YouTube:"
@@ -223,9 +223,9 @@ align = 2
 anchor_left = 0.071
 anchor_right = 0.071
 margin_left = 309.0
-margin_top = 437.0
+margin_top = 371.0
 margin_right = 769.0
-margin_bottom = 457.0
+margin_bottom = 391.0
 max_value = 24.0
 
 [node name="SliderLabel" type="Label" parent="Background/YoutubeHoursSlider"]
@@ -256,7 +256,6 @@ text = "You still have 24 hours left."
 align = 1
 
 [node name="ConfirmationDialog" type="WindowDialog" parent="Background"]
-visible = true
 margin_left = 186.0
 margin_top = 160.0
 margin_right = 841.0
