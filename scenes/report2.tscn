@@ -59,7 +59,7 @@ text = "Back"
 position = Vector2( 758, 329 )
 scale = Vector2( 0.479492, 0.463867 )
 frames = SubResource( 4 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="MessageLabel" type="Label" parent="Background"]
@@ -76,5 +76,10 @@ align = 1
 position = Vector2( 89, 188 )
 scale = Vector2( 0.9, 0.9 )
 
+[node name="Timer" type="Timer" parent="Background"]
+one_shot = true
+autostart = true
+
 [connection signal="button_down" from="Background/NextButton" to="." method="_on_NextButton_button_down"]
 [connection signal="button_down" from="Background/BackButton" to="." method="_on_BackButton_button_down"]
+[connection signal="timeout" from="Background/Timer" to="." method="_on_Timer_timeout"]

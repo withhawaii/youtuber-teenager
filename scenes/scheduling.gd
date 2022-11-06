@@ -6,11 +6,11 @@ var total_hours
 # Called when the node enters the scene tree for the first time.
 func _ready():
     main = get_node("/root/Main")
-#    main.school_hours = 4
-#    main.socialize_hours = 4
-#    main.eat_hours = 4
-#    main.sleep_hours = 4
-#    main.youtube_hours = 8
+    main.school_hours = 0
+    main.socialize_hours = 0
+    main.eat_hours = 0
+    main.sleep_hours = 0
+    main.youtube_hours = 0
     update_screen()
     
 func _on_NextButton_button_down():
@@ -36,22 +36,27 @@ func update_screen():
         $Background/NextButton.disabled = true
 
 func _on_SchoolHoursSlider_drag_ended(value_changed):
+    main.play_effect("click")
     main.school_hours = $Background/SchoolHoursSlider.value
     update_screen()
 
 func _on_SocializeHoursSlider_drag_ended(value_changed):
+    main.play_effect("click")
     main.socialize_hours = $Background/SocializeHoursSlider.value
     update_screen()
 
 func _on_EatHoursSlider_drag_ended(value_changed):
+    main.play_effect("click")
     main.eat_hours = $Background/EatHoursSlider.value
     update_screen()
 
 func _on_SleepHoursSlider_drag_ended(value_changed):
+    main.play_effect("click")
     main.sleep_hours = $Background/SleepHoursSlider.value
     update_screen()
 
 func _on_YoutubeHoursSlider_drag_ended(value_changed):
+    main.play_effect("click")
     main.youtube_hours = $Background/YoutubeHoursSlider.value
     update_screen()
 

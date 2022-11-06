@@ -7,7 +7,8 @@ func _ready():
     main = get_node("/root/Main")
     main.get_node("Header/TitleLabel").text = "Youtuber Results"
     main.update_header()
-    $Background/MessageLabel.text = "Your happieess points was "+ str(main.happiness_points) + "!"
+    main.update_happiness_points()
+    $Background/MessageLabel.text = "Your happiness points is "+ str(main.happiness_points) + "!"
     $Background/Chart.init_chart()
     main.play_effect("notice")
 
@@ -22,3 +23,14 @@ func _on_NextButton_button_down():
 func _on_BackButton_button_down():
     main.play_effect("click")
     main.change_scene("report1")
+
+func _on_Timer_timeout():
+    $Background/FaceIcon.playing = false
+    if main.happiness_points >= 75:
+        $Background/FaceIcon.frame = 1
+    elif main.happiness_points <= 50 and main.happiness_points < 75:
+        $Background/FaceIcon.frame = 2
+    elif main.happiness_points <= 25 and main.happiness_points < 50:
+        $Background/FaceIcon.frame = 3
+    elif main.happiness_points < 25:
+        $Background/FaceIcon.frame = 4

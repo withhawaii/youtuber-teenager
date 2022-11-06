@@ -78,3 +78,10 @@ func play_music(name):
 func stop_music():
     $MusicPlayer.stop()
        
+func update_happiness_points():
+    var average = (float(physical_points) + float(mental_points) + float(school_points) + float(social_points)) / 4.0
+    print("average:" + str(average))
+    var stdiv =  sqrt((pow(float(physical_points) - average, 2) + pow(float(mental_points) - average, 2) + pow(float(school_points) - average, 2) + pow(float(social_points) - average, 2)) / 4.0)
+    print("stdiv:" + str(stdiv))
+    happiness_points = int(average - stdiv)
+
