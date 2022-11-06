@@ -12,7 +12,6 @@ var elapsed_time
 var activity_sprites
 var reaction_sprites
 
-
 func _ready():
     main = get_node("/root/Main")
     main.get_node("Header").color = "00ffffff"
@@ -33,7 +32,7 @@ func _ready():
     youtube_end_time = total_time * main.youtube_hours / 24 + socialize_end_time
     sleep_end_time = total_time * main.sleep_hours / 24 + youtube_end_time
 
-#    main.play_music("main_theme")
+    main.play_music("main_theme")
     $Timer.start()
         
 func _on_NextButton_button_down():
@@ -48,31 +47,52 @@ func _on_Timer_timeout():
         elapsed_time = current_time
         $Background/Animation/TimerLabel.text = "Eating: " + str(eat_end_time - current_time) 
         change_activity_sprites(0) 
-        update_eating(current_time)
+        if elapsed_time <= 2 * 3:
+            main.physical_points = main.physical_points + 3
+
     # Studying    
     elif current_time >= eat_end_time and current_time < school_end_time:
         elapsed_time = current_time - eat_end_time
         $Background/Animation/TimerLabel.text = "Studying: " + str(school_end_time - current_time) 
         change_activity_sprites(1) 
-        update_studying(current_time - eat_end_time)
+        if main.physical_points > 0 and main.mental_points > 0:
+            main.school_points = main.school_points + 3
+            main.physical_points = main.physical_points - 1
+            main.mental_points = main.mental_points - 1
+
     # Hanging around    
     elif current_time >= school_end_time and current_time < socialize_end_time:
         elapsed_time = current_time - school_end_time
         $Background/Animation/TimerLabel.text = "Hanging around: " + str(socialize_end_time - current_time) 
         change_activity_sprites(2) 
-        update_socializing(current_time - school_end_time)
+        if main.money > 0:
+            main.social_points =  main.social_points + 3
+            main.mental_points = main.mental_points + 1
+            main.money = main.money - 10
+
     # Youtubing    
     elif current_time >= socialize_end_time and current_time < youtube_end_time:
         elapsed_time = current_time - socialize_end_time
         $Background/Animation/TimerLabel.text = "Yotubing: " + str(youtube_end_time - current_time) 
         change_activity_sprites(3) 
-        update_youtubing(current_time - socialize_end_time)
+        if main.physical_points > 0 and main.mental_points > 0:
+            main.youtuber_points = main.youtuber_points + 3
+            main.physical_points = main.physical_points - 1
+            main.mental_points = main.mental_points - 1
+
+        var thumbs_up_number = thumbs_up()
+        if thumbs_up_number > 0:
+            main.subscribers = main.subscribers + thumbs_up_number
+            show_reaction(thumbs_up_number)
+
     # Sleeping    
     elif current_time >= youtube_end_time and current_time < sleep_end_time:
         elapsed_time = current_time - youtube_end_time
         $Background/Animation/TimerLabel.text = "Sleeping: " + str(sleep_end_time - current_time)
         change_activity_sprites(4) 
-        update_sleeping(current_time - youtube_end_time)
+        if elapsed_time <= 8 * 3:
+            main.physical_points = main.physical_points + 3
+            main.mental_points = main.mental_points + 3
 
     elif current_time >= sleep_end_time:
         main.stop_music()
@@ -81,40 +101,8 @@ func _on_Timer_timeout():
         
     $Background/Chart.update_screen()
     main.update_header()
+    update_youtuber_points()
     current_time = current_time + 1
-
-func update_sleeping(elapsed_time):
-    if elapsed_time <= 8 * 3:
-        main.physical_points = main.physical_points + 3
-        main.mental_points = main.mental_points + 3
-    
-func update_eating(elapsed_time):
-    if elapsed_time <= 2 * 3:
-        main.physical_points = main.physical_points + 3
-    
-func update_studying(elapsed_time):
-    if main.physical_points > 0 and main.mental_points > 0:
-        main.school_points = main.school_points + 3
-        main.physical_points = main.physical_points - 1
-        main.mental_points = main.mental_points - 1
-
-func update_socializing(elapsed_time):
-    if main.money > 0:
-        main.social_points =  main.social_points + 3
-        main.mental_points = main.mental_points + 1
-        main.money = main.money - 10
-    
-func update_youtubing(elapsed_time):
-    if main.physical_points > 0 and main.mental_points > 0:
-        main.youtuber_points = main.youtuber_points + 3
-        main.physical_points = main.physical_points - 1
-        main.mental_points = main.mental_points - 1
-
-    var thumbs_up_number = thumbs_up(main.youtuber_points)
-    if thumbs_up_number > 0:
-      main.subscribers = main.subscribers + thumbs_up_number
-      show_reaction(thumbs_up_number)
-      update_youtuber_points()
     
 func change_activity_sprites(index):
     for i in range(5):
@@ -123,9 +111,7 @@ func change_activity_sprites(index):
 
 func show_reaction(number):
     main.play_effect("thumbs_up")
-    if number > 20:
-        number = 20
-    for i in range(number):
+    for i in range(number % 10):
       reaction_sprites.shuffle()
       reaction_sprites[0].visible = true
     
@@ -133,9 +119,9 @@ func hide_reactions():
     for i in range(20):
         reaction_sprites[i].visible = false  
     
-func thumbs_up(yotuber_points):
-    if randi() % 20 >= 18:
-      return randi() % yotuber_points
+func thumbs_up():
+    if randi() % 10 >= 8:
+      return randi() % main.youtuber_points
     else:
       return 0  
 

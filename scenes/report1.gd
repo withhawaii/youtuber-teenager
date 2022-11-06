@@ -13,8 +13,8 @@ func _ready():
         $Background/MessageLabel.text = $Background/MessageLabel.text + "It's " + str(1000000 - main.subscribers) + " more to reach siliver creator award."
     else:
         $Background/MessageLabel.text = "Hang in there!\n You lost " + str(main.previous_subscribers - main.subscribers) + " subscribers!"
-            
-    
+    main.play_effect("notice")
+                
 func _on_NextButton_button_down():
     main.play_effect("click")
     main.change_scene("report2")

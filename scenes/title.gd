@@ -12,7 +12,6 @@ func _on_NextButton_button_down():
     main.play_effect("click")
     main.change_scene("setting")
 
-
 func _on_HowToPlayButton_button_down():
     main.play_effect("click")
     $Background/HowToPlayDialog.popup_centered()

@@ -34,8 +34,7 @@ func update_PurchaseDialog():
       $Background/PurchaseDialog/ConfirmationMessage.text = "Would you like to upgrade your " + upgrade_item + " to level " + str(upgrade_level)  + "? \n" + "It will cost $" + str(upgrade_cost) + " to upgrade."
     else:
       $Background/PurchaseDialog/ConfirmationMessage.text = "You do not have enough money to upgrade your " + upgrade_item + "."
-      $Background/PurchaseDialog/YesButton.disabled = true
-    
+      $Background/PurchaseDialog/YesButton.disabled = true    
     $Background/PurchaseDialog.popup_centered()
     
 func _on_ComputerUpgradeButton_button_down():
@@ -52,14 +51,12 @@ func _on_SoftwareUpgradeButton_button_down():
     upgrade_level = main.software_level + 1
     update_PurchaseDialog()
 
-
 func _on_CameraUpgradeButton_button_down():
     main.play_effect("click")
     upgrade_item = "Video Camera"
     upgrade_cost = main.camera_level * 100
     upgrade_level = main.camera_level + 1
     update_PurchaseDialog()
-
 
 func _on_MicrophoneUpgrdeButton_button_down():
     main.play_effect("click")

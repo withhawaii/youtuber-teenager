@@ -9,8 +9,10 @@ func _ready():
     main.update_header()
     $Background/MessageLabel.text = "Your happieess points was "+ str(main.happiness_points) + "!"
     $Background/Chart.init_chart()
+    main.play_effect("notice")
 
 func _on_NextButton_button_down():
+    main.play_effect("click")
     if(main.is_no_more_days_left()):
       main.change_scene("gameover")
     else:
