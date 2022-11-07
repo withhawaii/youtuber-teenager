@@ -36,11 +36,9 @@ func _ready():
     $Timer.start()
         
 func _on_NextButton_button_down():
-    $Timer.stop()
-    main.stop_music()
-    main.update_money()
-    main.change_scene("report1")
-
+    for i in range(total_time - current_time):
+      _on_Timer_timeout()
+    
 func _on_Timer_timeout():
     hide_reactions()
     # Eating
@@ -96,7 +94,10 @@ func _on_Timer_timeout():
             main.mental_points = main.mental_points + 3
 
     elif current_time >= sleep_end_time:
-        _on_NextButton_button_down()
+        $Timer.stop()
+        main.stop_music()
+        main.update_money()
+        main.change_scene("report1")
         
     $Background/Chart.update_screen()
     main.update_header()
