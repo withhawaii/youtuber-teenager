@@ -5,16 +5,19 @@ var main
 # Called when the node enters the scene tree for the first time.
 func _ready():
     main = get_node("/root/Main")
-    main.get_node("Header/TitleLabel").text = "Youtuber Results"
+    main.get_node("Header/TitleLabel").text = "Life Balance Results"
     main.update_header()
     main.update_happiness_points()
     $Background/MessageLabel.text = "Your happiness points is "+ str(main.happiness_points) + "!"
     $Background/Chart.init_chart()
-    main.play_effect("notice")
-
+    if main.happiness_points >= 50:
+        main.play_effect("thumbs_up")
+    else:
+        main.play_effect("thumbs_down")
+        
 func _on_NextButton_button_down():
     main.play_effect("click")
-    if(main.is_no_more_days_left()):
+    if(main.is_game_over()):
       main.change_scene("gameover")
     else:
       main.current_day = main.current_day + 1

@@ -13,6 +13,8 @@ func _ready():
     main.get_node("Header/SubscriberLabel").visible = true
     main.get_node("Header/MoneyLabel").visible = true
     update_screen()
+    main.money_previous = main.money
+    main.subscribers_previous = main.subscribers
    
 func update_screen():
     main.update_header()

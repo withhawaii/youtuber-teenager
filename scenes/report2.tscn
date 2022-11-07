@@ -59,7 +59,7 @@ text = "Back"
 position = Vector2( 758, 329 )
 scale = Vector2( 0.479492, 0.463867 )
 frames = SubResource( 4 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="MessageLabel" type="Label" parent="Background"]

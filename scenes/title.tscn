@@ -70,7 +70,12 @@ margin_right = 580.0
 margin_bottom = 477.0
 rect_min_size = Vector2( 580, 0 )
 custom_fonts/font = SubResource( 4 )
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+text = "   You need to choose options during the game to become as popular you can on Youtube while keeping a successful life balance.
+   After you select or upgrade your Youtubing equipment, you will need to choose how much time to spend each day on life activities like sleeping, eating and hanging out with friends.
+  Therefore, it is important how you allocate your time and make a good balance of spending each time.
+  At the end of your time period, you will review how you are successful with your Youtube channel, social life, and overall happiness level.
+  Try to find a good balance and be successful in your life!
+"
 autowrap = true
 
 [node name="YesButton" type="Button" parent="Background/HowToPlayDialog"]

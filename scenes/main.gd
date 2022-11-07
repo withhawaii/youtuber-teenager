@@ -15,12 +15,14 @@ var school_points
 var social_points
 var youtuber_points
 var subscribers
-var previous_subscribers
+var subscribers_previous
 var money
-var previous_money
+var money_previous
+var money_total
 var happiness_points
+var happiness_points_total
 
-# Current hour allocations
+# Current hours allocation
 var school_hours
 var socialize_hours
 var eat_hours
@@ -43,10 +45,12 @@ func init_variables():
     school_points = 50
     social_points = 50
     subscribers = 0
-    previous_subscribers = subscribers
-    money = 100000
-    previous_money = money
+    subscribers_previous = subscribers
+    money = 100
+    money_previous = money
+    money_total = 0
     happiness_points = 0
+    happiness_points_total = 0
     school_hours = 0
     socialize_hours = 0
     eat_hours = 0
@@ -59,9 +63,6 @@ func change_scene(name):
     var new_scene = load("res://scenes/" + name + ".tscn").instance()
     $Body.add_child(new_scene)
     
-func is_no_more_days_left():
-    return current_day >= total_days
-
 func update_header():
     $Header/DayLabel.text = "Day: " + str(current_day) + " of " + str(total_days)
     $Header/MoneyLabel.text = str(money)
@@ -77,11 +78,29 @@ func play_music(name):
     
 func stop_music():
     $MusicPlayer.stop()
-       
+   
+func is_game_over():
+    return current_day >= total_days or physical_points <= 0 or mental_points <= 0 or school_points <= 0 or social_points <= 0
+
+func update_youtuber_points():
+    youtuber_points = computer_level * 160 + software_level * 80 + camera_level * 40 + microphone_level * 20 + subscribers
+    print("youtuber points:" + str(youtuber_points))
+
 func update_happiness_points():
     var average = (float(physical_points) + float(mental_points) + float(school_points) + float(social_points)) / 4.0
-    print("average:" + str(average))
+#    print("average:" + str(average))
     var stdiv =  sqrt((pow(float(physical_points) - average, 2) + pow(float(mental_points) - average, 2) + pow(float(school_points) - average, 2) + pow(float(social_points) - average, 2)) / 4.0)
-    print("stdiv:" + str(stdiv))
+#    print("stdiv:" + str(stdiv))
     happiness_points = int(average - stdiv)
+    happiness_points_total = happiness_points_total + happiness_points
 
+func update_money():
+    money_previous = money
+    money = money + int(randi() % 10 * subscribers * 0.001)
+    money_total = money_total + (money - money_previous)
+
+func get_thumbs_up():
+    if randi() % 10 >= 8:
+      return randi() % youtuber_points
+    else:
+      return 0  
