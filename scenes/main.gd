@@ -96,7 +96,7 @@ func update_happiness_points():
 
 func update_money():
     money_previous = money
-    money = money + int(randi() % 10 * subscribers * 0.001)
+    money = money + int(randi() % 10 * subscribers * 0.01)
     money_total = money_total + (money - money_previous)
 
 func get_thumbs_up():
